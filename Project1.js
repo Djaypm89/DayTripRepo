@@ -1,6 +1,6 @@
 "use strict"
 
-//function to randomly select DESTINATION
+// random destination function 
 
 let dest = ['Brazil', 'Thailand', 'Greece'];  //array to be utilized by rnd fnct.
 
@@ -25,7 +25,7 @@ while (isHappyDest !== true) {
 console.log("Final Chosen Destionation: " + chosenDest)
 
 
-// function to randomly select restaurant
+//  random restaurant function
     
 
 let rest = ['Mission BBQ', 'Five Guys', 'Suki Hana'];
@@ -52,9 +52,7 @@ while (isHappyRest !== true) {
 console.log("Final Chosen Restaurant: " + chosenRest);
 
 
-
-
-// functin to randomly select transportation 
+// random transportation function  
 
 let trans = ["Car", "Boat", "Plane"];
 
@@ -79,7 +77,7 @@ while (isHappyTrans !== true) {
 console.log("Final Chosen Transportation: " + chosenTrans)
 
 
-// entertainment
+// random entertainment function 
 
  let ent = ["Movie", "Music", "Podcast"];
 
@@ -88,6 +86,8 @@ console.log("Final Chosen Transportation: " + chosenTrans)
  }
 
  let chosenEnt = entRand(ent);
+
+//  Re-Select Generator
 
  let isHappyEnt = false   //prompt cmd for user response to initial dest
 
@@ -108,33 +108,39 @@ console.log("Final Chosen Entertainment: " + chosenEnt)
 // END: Choices Generator.
 
 
+//  START:  Trip Complete function.
+
+
 let tripHappy = false;
 
 while (tripHappy !== true) {
     let responseTrip =  prompt("Are you happy with all of the selections?");
-    if (tripHappy.toLowerCase === "yes") {
+    if (responseTrip.toLowerCase() === "yes") {
         tripHappy = true;
     }
     else {
         alert("hmmm, bummer");
+        // ask which input user wants to change, call back that function. how?
     }    
+
 }
 console.log("Ok, you're all set!");
 
 
+// START:  Print Completed trip to Console. 
+
+
+let tripComplete = 
+("We hope you enjoyed your trip to " + chosenDest + ", " 
++ "your meal at " + chosenRest + "," 
++ " your " + chosenTrans + " ride " +
+"and your " +chosenEnt + " entertainment!");
+
+console.log(tripComplete);
 
 
 
 
-// function doSomething(){
-//     let num1 =7;
-//     let num2 = 5;
-//     let result = addTwoNumbers(num1,num2)
-//     console.log(result)
-// }
 
-// function addTwoNumbers(numberOne, numberTwo){
-//     return numberOne + numberTwo;
-// }
 
-// doSomething();
+
